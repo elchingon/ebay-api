@@ -61,7 +61,7 @@ module Ebay # :nodoc:
       text_node :status, 'Status', :optional => true
       time_node :shipped_time, 'ShippedTime', :optional => true
       
-      value_array_node :shipment_tracking_details, 'ShipmentTrackingDetails', :class => ShipmentTrackingDetails, :default_value => []
+      object_node :shipment_tracking_details, 'ShipmentTrackingDetails', :class => ShipmentTrackingDetails, :optional => true
     end
   end
 end
