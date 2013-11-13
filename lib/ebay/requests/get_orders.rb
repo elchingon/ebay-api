@@ -23,6 +23,7 @@ module Ebay # :nodoc:
       text_node :order_status, 'OrderStatus', :optional => true
       text_node :listing_type, 'ListingType', :optional => true
       text_node :sorting_order, 'SortingOrder', :optional => true
+      text_node :site, 'Site', :optional => true
       numeric_node :number_of_days, 'NumberOfDays', :optional => true
       object_node :pagination, 'Pagination', :class => Pagination, :optional => true
     end
