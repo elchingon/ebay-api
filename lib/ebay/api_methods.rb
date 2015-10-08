@@ -17,6 +17,14 @@ module Ebay
     def add_dispute_response(params = {})
       commit(Ebay::Requests::AddDisputeResponse, params)
     end
+    # Builds Ebay::Requests#AddFixedPriceItem
+    #
+    # Returns Ebay::Responses#AddFixedPriceItem
+    #
+    # Official Documentation for AddFixedPriceItem[http://developer.ebay.com/DevZone/XML/docs/Reference/eBay/AddFixedPriceItem.html]
+    def add_fixed_price_item(params = {})
+      commit(Ebay::Requests::AddFixedPriceItem, params)
+    end
     # Builds Ebay::Requests#AddItem
     #
     # Returns Ebay::Responses#AddItem
@@ -1240,6 +1248,14 @@ module Ebay
     # Official Documentation for VerifyAddItem[http://developer.ebay.com/DevZone/XML/docs/Reference/eBay/io_VerifyAddItem.html]
     def verify_add_item(params = {})
       commit(Ebay::Requests::VerifyAddItem, params)
+    end
+    # Builds Ebay::Requests#VerifyAddFixedPriceItem
+    #
+    # Returns Ebay::Responses#VerifyAddFixedPriceItem
+    #
+    # Official Documentation for VerifyAddFixedPriceItem[http://developer.ebay.com/DevZone/XML/docs/Reference/eBay/VerifyAddFixedPriceItem.html]
+    def verify_add_fixed_price_item(params = {})
+      commit(Ebay::Requests::VerifyAddFixedPriceItem, params)
     end
     # Builds Ebay::Requests#VerifyAddSecondChanceItem
     #
