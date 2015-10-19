@@ -146,8 +146,8 @@ module Ebay # :nodoc:
     #  value_array_node :payment_allowed_sites, 'PaymentAllowedSite', :default_value => []
     #  text_node :inventory_tracking_method, 'InventoryTrackingMethod', :optional => true
     #  boolean_node :integrated_merchant_credit_card_enabled, 'IntegratedMerchantCreditCardEnabled', 'true', 'false', :optional => true
-    #  time_node :start_time, 'StartTime', :optional => true	
-    #  time_node :end_time, 'EndTime', :optional => true	
+    #  text_node :start_time, 'StartTime', :optional => true	
+    #  text_node :end_time, 'EndTime', :optional => true	
     class Item
       include XML::Mapping
       include Initializer
@@ -266,8 +266,8 @@ module Ebay # :nodoc:
       text_node :inventory_tracking_method, 'InventoryTrackingMethod', :optional => true
       boolean_node :integrated_merchant_credit_card_enabled, 'IntegratedMerchantCreditCardEnabled', 'true', 'false', :optional => true
       numeric_node :condition_id, 'ConditionID', :optional => true
-      time_node :start_time, 'StartTime', :optional => true	
-      time_node :end_time, 'EndTime', :optional => true	
+      text_node :start_time, 'StartTime', :optional => true	
+      text_node :end_time, 'EndTime', :optional => true	
     end
   end
 end
