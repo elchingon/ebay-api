@@ -9,7 +9,7 @@ module Ebay # :nodoc:
     #  array_node :fees, 'Fees', 'Fee', :class => Fee, :default_value => []
     #  text_node :category_id, 'CategoryID', :optional => true
     #  text_node :category2_id, 'Category2ID', :optional => true
-    class AddItem < Abstract
+    class AddFixedPriceItem < Abstract
       include XML::Mapping
       include Initializer
       root_element_name 'AddFixedPriceItemResponse'
