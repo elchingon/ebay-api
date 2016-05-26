@@ -54,6 +54,7 @@ module Ebay # :nodoc:
       time_node :paid_time, 'PaidTime', :optional => true
       time_node :shipped_time, 'ShippedTime', :optional => true
       boolean_node :integrated_merchant_credit_card_enabled, 'IntegratedMerchantCreditCardEnabled', 'true', 'false', :optional => true
+      object_node :monetary_details, 'MonetaryDetails', :class => MonetaryDetails, :optional => true
     end
   end
 end
