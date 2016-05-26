@@ -262,3 +262,6 @@ require 'ebay/types/warranty_duration_options_code'
 require 'ebay/types/warranty_offered_code'
 require 'ebay/types/warranty_type_options_code'
 require 'ebay/types/wireless_carrier_id_code'
+
+
+
