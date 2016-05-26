@@ -1,3 +1,6 @@
+require 'ebay/types/payments'
+require 'ebay/types/refunds'
+
 module Ebay # :nodoc:
   module Types # :nodoc:
     # == Attributes

@@ -1,8 +1,10 @@
+require 'ebay/types/refund'
+
 module Ebay # :nodoc:
   module Types # :nodoc:
     # == Attributes
     # object_node :refund, 'Refund', :class => Refund, :optional => true
-    class MonetaryDetails
+    class Refunds
       include XML::Mapping
       include Initializer
       root_element_name 'MonetaryDetails'

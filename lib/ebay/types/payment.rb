@@ -8,7 +8,7 @@ module Ebay # :nodoc:
     # numeric_node :payment_amount, 'PaymentAmount', :optional => true
     # text_node :reference_id, 'ReferenceId', :optional => true
 
-    class MonetaryDetails
+    class Payment
       include XML::Mapping
       include Initializer
       root_element_name 'Payment'
