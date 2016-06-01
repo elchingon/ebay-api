@@ -10,7 +10,7 @@ module Ebay # :nodoc:
       include XML::Mapping
       include Initializer
       root_element_name 'MonetaryDetails'
-      object_node :payments, 'Payments', :class => Payments, :optional => true
+      array_node :payments, 'Payments', 'Payment', :class => Payment, :default_value => []
       object_node :refunds, 'Refunds', :class => Refunds, :optional => true
     end
   end

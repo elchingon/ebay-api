@@ -17,7 +17,7 @@ module Ebay # :nodoc:
       text_node :payer, 'Payer', :optional => true
       numeric_node :fee_or_credit_amount, 'FeeOrCreditAmount', :optional => true
       numeric_node :payment_amount, 'PaymentAmount', :optional => true
-      text_node :reference_id, 'ReferenceId', :optional => true
+      text_node :reference_id, 'ReferenceID', :optional => true
     end
   end
 end
