@@ -9,7 +9,6 @@ require 'ebay/types/feedback_info'
 require 'ebay/types/order'
 require 'ebay/types/listing_checkout_redirect_preference'
 require 'ebay/types/refund'
-require 'ebay/types/monetary_details'
 
 module Ebay # :nodoc:
   module Types # :nodoc:
@@ -54,7 +53,6 @@ module Ebay # :nodoc:
     #  text_node :paisa_pay_id, 'PaisaPayID', :optional => true
     #  money_node :buyer_guarantee_price, 'BuyerGuaranteePrice', :optional => true
     #  text_node :buyer_checkout_message, 'BuyerCheckoutMessage', :optional => true
-    #  object_node :monetary_details, 'MonetaryDetails', :class => MonetaryDetails, :optional => true
     class Transaction
       include XML::Mapping
       include Initializer
@@ -99,7 +97,6 @@ module Ebay # :nodoc:
       text_node :paisa_pay_id, 'PaisaPayID', :optional => true
       money_node :buyer_guarantee_price, 'BuyerGuaranteePrice', :optional => true
       text_node :buyer_checkout_message, 'BuyerCheckoutMessage', :optional => true
-      object_node :monetary_details, 'MonetaryDetails', :class => MonetaryDetails, :optional => true
     end
   end
 end
