@@ -29,6 +29,7 @@ require 'ebay/types/item_policy_violation'
 require 'ebay/types/business_seller_details'
 require 'ebay/types/buyer_requirement_details'
 require 'ebay/types/return_policy'
+require 'ebay/types/seller_profiles'
 
 module Ebay # :nodoc:
   module Types # :nodoc:
@@ -143,11 +144,12 @@ module Ebay # :nodoc:
     #  money_node :buyer_guarantee_price, 'BuyerGuaranteePrice', :optional => true
     #  object_node :buyer_requirement_details, 'BuyerRequirementDetails', :class => BuyerRequirementDetails, :optional => true
     #  object_node :return_policy, 'ReturnPolicy', :class => ReturnPolicy, :optional => true
+    #  object_node :seller_profiles, 'SellerProfiles', :class => SellerProfiles, :optional => true
     #  value_array_node :payment_allowed_sites, 'PaymentAllowedSite', :default_value => []
     #  text_node :inventory_tracking_method, 'InventoryTrackingMethod', :optional => true
     #  boolean_node :integrated_merchant_credit_card_enabled, 'IntegratedMerchantCreditCardEnabled', 'true', 'false', :optional => true
-    #  text_node :start_time, 'StartTime', :optional => true	
-    #  text_node :end_time, 'EndTime', :optional => true	
+    #  text_node :start_time, 'StartTime', :optional => true
+    #  text_node :end_time, 'EndTime', :optional => true
     class Item
       include XML::Mapping
       include Initializer
@@ -262,12 +264,13 @@ module Ebay # :nodoc:
       money_node :buyer_guarantee_price, 'BuyerGuaranteePrice', :optional => true
       object_node :buyer_requirement_details, 'BuyerRequirementDetails', :class => BuyerRequirementDetails, :optional => true
       object_node :return_policy, 'ReturnPolicy', :class => ReturnPolicy, :optional => true
+      object_node :seller_profiles, 'SellerProfiles', :class => SellerProfiles, :optional => true
       value_array_node :payment_allowed_sites, 'PaymentAllowedSite', :default_value => []
       text_node :inventory_tracking_method, 'InventoryTrackingMethod', :optional => true
       boolean_node :integrated_merchant_credit_card_enabled, 'IntegratedMerchantCreditCardEnabled', 'true', 'false', :optional => true
       numeric_node :condition_id, 'ConditionID', :optional => true
-      text_node :start_time, 'StartTime', :optional => true	
-      text_node :end_time, 'EndTime', :optional => true	
+      text_node :start_time, 'StartTime', :optional => true
+      text_node :end_time, 'EndTime', :optional => true
     end
   end
 end
